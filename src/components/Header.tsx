@@ -1,10 +1,32 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, ShoppingCart, Search } from "lucide-react";
+import { Menu, ShoppingCart, Search, Phone, Mail } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
+      {/* Top Bar */}
+      <div className="border-b border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-10 text-sm">
+            <div className="flex items-center gap-6 text-muted-foreground">
+              <a href="tel:+380000000000" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="h-4 w-4" />
+                <span className="hidden md:inline">+380 00 000 0000</span>
+              </a>
+              <a href="mailto:info@bambulab.ua" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="h-4 w-4" />
+                <span className="hidden md:inline">info@bambulab.ua</span>
+              </a>
+            </div>
+            <div className="text-muted-foreground hidden md:block">
+              Free shipping on orders over $500
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -17,16 +39,19 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/printers" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              All Printers
+              3D Printers
             </Link>
-            <Link to="/ecosystem" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Ecosystem
+            <Link to="/filament" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Filament
             </Link>
-            <Link to="/tutorials" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Tutorials
+            <Link to="/accessories" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Accessories
             </Link>
-            <Link to="/support" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Support
+            <Link to="/scanners" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              3D Scanners
+            </Link>
+            <Link to="/charging" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Charging Stations
             </Link>
           </nav>
 

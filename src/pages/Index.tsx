@@ -1,57 +1,19 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { printers } from "@/data/printers";
-import heroImage from "@/assets/hero-x1-carbon.jpg";
-import { ArrowRight, Zap, Shield, Award } from "lucide-react";
+import promoBanner from "@/assets/promo-banner.png";
+import { ArrowRight, Zap, Shield, Award, Package, Sparkles } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="BambuLab X1 Carbon"
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        </div>
-        
-        <div className="container mx-auto px-4 z-10 text-center animate-fade-in">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-              The Future of{" "}
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
-                3D Printing
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Experience unprecedented speed, precision, and reliability with BambuLab's revolutionary 3D printers.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button variant="hero" size="lg" className="text-lg">
-                Explore Printers
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg border-primary text-primary hover:bg-primary hover:text-background">
-                Watch Demo
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-primary rounded-full" />
-          </div>
-        </div>
-      </section>
+      {/* Hero Carousel */}
+      <HeroCarousel />
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-20">
@@ -88,14 +50,69 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Featured Categories */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="group relative overflow-hidden rounded-2xl bg-gradient-card border border-border p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors" />
+            <Package className="h-12 w-12 text-primary mb-4" />
+            <h3 className="text-2xl font-bold text-foreground mb-2">3D Printers</h3>
+            <p className="text-muted-foreground mb-4">
+              Discover our range of professional 3D printers with cutting-edge technology
+            </p>
+            <Button variant="hero" className="mt-4">
+              Browse Printers
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+
+          <div className="group relative overflow-hidden rounded-2xl bg-gradient-card border border-border p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors" />
+            <Sparkles className="h-12 w-12 text-primary mb-4" />
+            <h3 className="text-2xl font-bold text-foreground mb-2">Filament</h3>
+            <p className="text-muted-foreground mb-4">
+              Premium quality filaments in various materials and colors
+            </p>
+            <Button variant="hero" className="mt-4">
+              Shop Filament
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+
+          <div className="group relative overflow-hidden rounded-2xl bg-gradient-card border border-border p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors" />
+            <Award className="h-12 w-12 text-primary mb-4" />
+            <h3 className="text-2xl font-bold text-foreground mb-2">AMS & Accessories</h3>
+            <p className="text-muted-foreground mb-4">
+              Enhance your printing experience with our accessories
+            </p>
+            <Button variant="hero" className="mt-4">
+              View Accessories
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Promo Banner */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="relative rounded-3xl overflow-hidden">
+          <img
+            src={promoBanner}
+            alt="Black Friday Sale - Up to 30% Off"
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
+
       {/* Featured Printers */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Our Printers
+            New Arrivals
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From hobbyists to professionals, we have the perfect 3D printer for your needs.
+            Discover the latest innovations in 3D printing technology
           </p>
         </div>
 
