@@ -60,7 +60,7 @@ const Index = () => {
             <p className="text-muted-foreground mb-4">
               Discover our range of professional 3D printers with cutting-edge technology
             </p>
-            <Button variant="hero" className="mt-4">
+            <Button variant="hero" className="mt-4" onClick={() => window.location.href = '/catalog'}>
               Browse Printers
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -73,7 +73,7 @@ const Index = () => {
             <p className="text-muted-foreground mb-4">
               Premium quality filaments in various materials and colors
             </p>
-            <Button variant="hero" className="mt-4">
+            <Button variant="hero" className="mt-4" onClick={() => window.location.href = '/catalog'}>
               Shop Filament
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -86,7 +86,7 @@ const Index = () => {
             <p className="text-muted-foreground mb-4">
               Enhance your printing experience with our accessories
             </p>
-            <Button variant="hero" className="mt-4">
+            <Button variant="hero" className="mt-4" onClick={() => window.location.href = '/catalog'}>
               View Accessories
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -123,8 +123,116 @@ const Index = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-background">
-            View All Printers
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-background" onClick={() => window.location.href = '/catalog'}>
+            View All Products
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Everything you need to know about BambuLab 3D printers
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">What's the best printer for beginners?</h3>
+            <p className="text-muted-foreground">
+              The BambuLab A1 Mini is perfect for beginners - it's affordable, compact, and comes fully assembled with automatic calibration for hassle-free printing.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">How difficult is setup?</h3>
+            <p className="text-muted-foreground">
+              BambuLab printers are designed for quick setup. Most models are ready to print in under 30 minutes with automatic bed leveling and calibration.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">What's included in the price?</h3>
+            <p className="text-muted-foreground">
+              Every printer includes the printer unit, power cable, sample filament, tools, and comprehensive documentation. Some models include additional accessories.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">Do you offer warranty?</h3>
+            <p className="text-muted-foreground">
+              Yes! All BambuLab printers come with a 1-year manufacturer warranty covering defects and malfunctions. Extended warranty options are available.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">What materials can I print with?</h3>
+            <p className="text-muted-foreground">
+              BambuLab printers support PLA, PETG, ABS, TPU, and advanced materials like Carbon Fiber and ASA. Multi-material printing available with AMS.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+            <h3 className="text-xl font-bold text-foreground mb-3">How fast can these printers print?</h3>
+            <p className="text-muted-foreground">
+              BambuLab printers feature speeds up to 500mm/s with CoreXY systems, allowing you to complete projects in a fraction of the time compared to traditional printers.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-background" onClick={() => window.location.href = '/faq'}>
+            View All FAQs
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Payment Methods Section */}
+      <section className="container mx-auto px-4 py-20 bg-card/30">
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Payment Methods
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            We accept multiple payment options for your convenience
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="p-8 rounded-xl bg-card border border-border text-center hover:border-primary/50 transition-colors">
+            <div className="text-4xl mb-3">💳</div>
+            <h3 className="text-lg font-semibold text-foreground">Credit Card</h3>
+            <p className="text-sm text-muted-foreground mt-2">Visa, Mastercard</p>
+          </div>
+
+          <div className="p-8 rounded-xl bg-card border border-border text-center hover:border-primary/50 transition-colors">
+            <div className="text-4xl mb-3">💵</div>
+            <h3 className="text-lg font-semibold text-foreground">Cash on Delivery</h3>
+            <p className="text-sm text-muted-foreground mt-2">Pay when you receive</p>
+          </div>
+
+          <div className="p-8 rounded-xl bg-card border border-border text-center hover:border-primary/50 transition-colors">
+            <div className="text-4xl mb-3">🏦</div>
+            <h3 className="text-lg font-semibold text-foreground">Bank Transfer</h3>
+            <p className="text-sm text-muted-foreground mt-2">Direct payment</p>
+          </div>
+
+          <div className="p-8 rounded-xl bg-card border border-border text-center hover:border-primary/50 transition-colors">
+            <div className="text-4xl mb-3">📱</div>
+            <h3 className="text-lg font-semibold text-foreground">Digital Wallets</h3>
+            <p className="text-sm text-muted-foreground mt-2">Apple Pay, Google Pay</p>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-background" onClick={() => window.location.href = '/payments'}>
+            View Payment Details
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
@@ -142,10 +250,10 @@ const Index = () => {
               Join thousands of makers, engineers, and creators who trust BambuLab for their 3D printing needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button variant="hero" size="lg" className="text-lg">
+              <Button variant="hero" size="lg" className="text-lg" onClick={() => window.location.href = '/catalog'}>
                 Shop Now
               </Button>
-              <Button variant="outline" size="lg" className="text-lg border-foreground/20 hover:bg-foreground/10">
+              <Button variant="outline" size="lg" className="text-lg border-foreground/20 hover:bg-foreground/10" onClick={() => window.location.href = '/about'}>
                 Contact Sales
               </Button>
             </div>

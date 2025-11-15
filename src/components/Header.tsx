@@ -58,22 +58,16 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/catalog" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Catalog
+              Products
             </Link>
-            <Link to="/printers" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              3D Printers
+            <Link to="/faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              FAQ
             </Link>
-            <Link to="/filament" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Filament
+            <Link to="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              About Us
             </Link>
-            <Link to="/accessories" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Accessories
-            </Link>
-            <Link to="/scanners" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              3D Scanners
-            </Link>
-            <Link to="/charging" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Charging Stations
+            <Link to="/payments" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Payments
             </Link>
           </nav>
 
