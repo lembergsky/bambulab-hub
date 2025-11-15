@@ -81,9 +81,9 @@ export const HeroCarousel = () => {
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className="w-full h-full object-cover opacity-40 animate-fade-in"
+                    className="w-full h-full object-cover animate-fade-in"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/30 to-background/90" />
                 </div>
 
                 {/* Content */}
